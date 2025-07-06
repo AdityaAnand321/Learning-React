@@ -1,0 +1,6 @@
+component ek type ka function hai jo jsx return karta hai
+class jsx me ek reserved keyword hai to esly ab className use hoga usme
+
+
+component hamesha </> is format me likhte hai
+
