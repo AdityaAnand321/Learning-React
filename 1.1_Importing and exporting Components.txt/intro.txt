@@ -1,0 +1,17 @@
+export ::
+export default function gallery(){
+    return (<h1>This is call for othercomponent</h1>
+            <Profile/>
+            )
+}
+
+import ::
+import componentName from ./FileName.js
+
+export function bhut sare ho sakte hai
+export default function ek hi hota hai
+
+default ko alag alag name se bhi access kar sakte hai
+
+named ko curly braces me bhi likhte hai
+import {Profile} from './Gallery.hs';

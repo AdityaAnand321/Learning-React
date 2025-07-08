@@ -1,0 +1,19 @@
+1_Node Js must be installed on PC.
+BoilerPlate: Refers to reused codes 
+
+Method 1: Using Vite Build Tool
+i: write in terminal npm create vite@latest
+ii: select react
+iii: select javascript
+iv: write the project name
+v: run npm install and npm run dev
+
+Method 2: Using Create React App(This is no longer used)
+i:navigate to the folder where you want to create the project
+ii: write in terminal npx create-react-app project-name 
+iii:write cd <<Project_Name>>
+iv: it will install some packages 
+v: to run type npm start
+
+Method 3: Using webpack babel(this is  a long process)
+i: 

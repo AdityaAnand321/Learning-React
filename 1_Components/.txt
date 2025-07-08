@@ -3,4 +3,11 @@ class jsx me ek reserved keyword hai to esly ab className use hoga usme
 
 
 component hamesha </> is format me likhte hai
+component should return jsx and starts with uppercase
 
+eg: 
+function HelloWorld(){
+    return <h1>Hello World</h1>
+}
+
+js code ko {} curly braces ke undar likhenge.

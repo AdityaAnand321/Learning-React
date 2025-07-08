@@ -1,2 +1,9 @@
 index>main.jsx>app.jsx me coding hoga
 jsx me html + javascript ke codes use kar sakte hai
+
+Folder Intro:
+Node_modules: isme libraries ka code hota hai
+Public: output me jo dikhae deta hai: starting wala
+packga.json: configuration file
+src folder: imp folder      
+            

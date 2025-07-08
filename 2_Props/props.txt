@@ -1,0 +1,49 @@
+components use props to communicate with each other. 
+props are the information that you pass to JSX tag.
+
+pass: 
+function Profile(){
+return (
+    <Avatar 
+    person={{name: 'abc',imageId:'abx'}}
+    size={100};
+    />
+);
+}
+
+function Avatar({person,size}){
+    return (
+        person={person.name};
+        size={size};
+    )
+}
+
+2. method 2 to access props
+function Avatar(props){
+    let person=props.person;
+    let size=props.size;
+}
+
+3.default value of props
+function Avatar({person,size=100}){}
+
+4.spread operator bhi use kar sakte hai 
+
+function Profile(props)
+{
+    return(<div className="card">
+            <Avatar {...props}/>
+        </div>
+        );
+
+}
+
+5. Same way me bhi return kar sakte hai 
+
+function Card({children}){
+    return(
+        <div className="card">
+        {children}
+        </div>
+    )
+}
