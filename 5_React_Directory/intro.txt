@@ -1,0 +1,19 @@
+package.json: contains the project name,version and scripts
+              keeps track of libraries
+              
+package-lock.json: contains data about version of installed packages
+                   insure everyone install the same version
+
+node_modules: sare installed libraries hote hai isme 
+
+npm: package.json ko padhta hai aur node_modules me jo library chahiye usko download karta hai
+
+
+src: custom codes karte hai iss folder me all react codes and components
+
+gitignore: ye git ko batata hai ki iss file ko upload ny karnna hai github perform
+            ye esly use krte bcz kuch file ham share ny karna chhhate like node_modules too big auto_gennerated codes
+
+public: contains static files not served by js served as is to the browser
+
+NPM: 

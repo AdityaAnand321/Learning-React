@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Scheduler</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    #taskForm {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    #tasks {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .task {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .completed {
+      text-decoration: line-through;
+      background-color: #c8f7c5;
+    }
+    .pending {
+      background-color: #fef3bd;
+    }
+    .incomplete {
+      background-color: #f8d7da;
+    }
+    .actions button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Task Scheduler</h1>
+  <form id="taskForm">
+    <input type="text" id="taskInput" placeholder="Enter Task" required />
+    <select id="status">
+      <option value="pending">Pending</option>
+      <option value="incomplete">Incomplete</option>
+    </select>
+    <input type="color" id="bgColor" value="#ffffff" />
+    <button type="submit">Add Task</button>
+  </form>
+  <div id="tasks"></div>
+
+  <script>
+    const taskForm = document.getElementById("taskForm");
+    const taskInput = document.getElementById("taskInput");
+    const tasksDiv = document.getElementById("tasks");
+
+    let tasks = [];
+
+    taskForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const task = {
+        id: Date.now(),
+        text: taskInput.value,
+        status: document.getElementById("status").value,
+        color: document.getElementById("bgColor").value,
+        createdAt: new Date(),
+        completedAt: null
+      };
+      tasks.push(task);
+      renderTasks();
+      taskForm.reset();
+    });
+
+    function renderTasks() {
+      tasksDiv.innerHTML = "";
+      tasks.forEach(task => {
+        const taskEl = document.createElement("div");
+        taskEl.className = `task ${task.status}`;
+        taskEl.style.backgroundColor = task.color;
+        taskEl.innerHTML = `
+          <strong>${task.text}</strong><br>
+          <small>Created: ${task.createdAt.toLocaleString()}</small><br>
+          ${task.completedAt ? `<small>Completed: ${task.completedAt.toLocaleString()}</small><br>` : ""}
+          <div class="actions">
+            <button onclick="editTask(${task.id})">Edit</button>
+            <button onclick="deleteTask(${task.id})">Delete</button>
+            <button onclick="toggleComplete(${task.id})">${task.status === "completed" ? "Mark Incomplete" : "Mark Completed"}</button>
+          </div>
+        `;
+        tasksDiv.appendChild(taskEl);
+      });
+    }
+
+    function editTask(id) {
+      const task = tasks.find(t => t.id === id);
+      const newText = prompt("Edit task:", task.text);
+      if (newText) {
+        task.text = newText;
+        renderTasks();
+      }
+    }
+
+    function deleteTask(id) {
+      tasks = tasks.filter(t => t.id !== id);
+      renderTasks();
+    }
+
+    function toggleComplete(id) {
+      const task = tasks.find(t => t.id === id);
+      if (task.status === "completed") {
+        task.status = "pending";
+        task.completedAt = null;
+      } else {
+        task.status = "completed";
+        task.completedAt = new Date();
+      }
+      renderTasks();
+    }
+  </script>
+</body>
+</html>

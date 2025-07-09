@@ -1,0 +1,10 @@
+NPM : Node Package Manager
+ye js me likhe huye packages ko install manage update aur delete karta hai
+
+kyu use karte hai
+1.pakage install karne ke liye
+2.dependencies ko manage karne ke liye jo package.json me hota hai
+
+package.json: is file me bataya jata hai kaun se packages chahiye
+node_modules: ye folder sabhi installed packages ko rkhta hai
+package-lock.json: ye make sure karta hai sab log same version use karne

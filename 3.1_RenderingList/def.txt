@@ -1,0 +1,19 @@
+Rendering List means displaying multiple items from array using jsx
+
+const items = ["Space suit", "Helmet", "Photo of Tam"];
+function PackingList() {
+  return (
+    <ul>
+      {items.map(item => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+agar arrow function ke sath likh rhe hai to return karne ki jaroorat ny hai
+
+Key: isko list me har item ke sath dete  hai taki sabko tract kar sake 
+    const name=['Aditya','Bob',Charlie];
+    const listItems=name.map((name,index)=>
+          <li key={index}>{name}</li>
+      );

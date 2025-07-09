@@ -1,0 +1,13 @@
+isme conditions lagate hai 
+like if else :? ternary operator 
+
+&& is read as 
+
+return (
+  <li className="item">
+    {name} {isPacked && '✅'}
+  </li>
+);
+
+if( is packed then )
+
