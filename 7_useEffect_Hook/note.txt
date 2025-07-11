@@ -11,3 +11,31 @@ useEffect(()=>{console.log("heelo")});
 useEffect(()=>{console.log("heelo")},[]);
 useEffect(()=>{console.log("heelo")},[array]);
 
+UseEffect: is a ReactHook used to Handle sideEffects in functional components.
+            Side Effects are the operations that affect other parts of the application or the outside world
+
+
+// 1 .ye sirf first render pe chalega 
+useEffectc(()=>{
+    console.log("Counter Mounted");
+},[])
+
+
+2.ye jab bhi count me kuch change karenege to chalega
+ useEffect(()=>{"Counter Mounted"},[count])
+
+3. ye sare render pe chalega
+useEffect()=>{
+    console.log("hello");
+}
+
+4. CLEAN UP FUNCTION: ye jab triggered hota hai jab count unmounted from UI mtlb previous value update ya delete ki jatii hai
+useEffect(()=>{
+    console.log("count is mounted");
+    return()=>
+    {
+        alert("count is unmonted")//jab kuch naya render hota hai to
+
+    }
+
+},[count]);
