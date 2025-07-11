@@ -17,3 +17,31 @@ Key: isko list me har item ke sath dete  hai taki sabko tract kar sake
     const listItems=name.map((name,index)=>
           <li key={index}>{name}</li>
       );
+      -------------------------------------------------------------------------
+
+      ⚠️ Why shouldn't we use index as a key?
+Using the index as a key is generally discouraged when the list can change (items can be reordered, added, or removed). Here's why:
+
+❌ Problems with using index as a key:
+Wrong identity tracking:
+React may reuse the same component instance for different items, causing bugs with state or UI.
+
+Poor performance:
+It may trigger unnecessary re-renders, as React can't tell which element actually changed.
+
+Breaks animations or transitions:
+React may not animate correctly if it thinks elements were removed and added instead of reordered.
+
+✅ When is index acceptable as a key?
+When the list is static and will never change.
+
+const array = [
+  { id: 'a', value: 1 },
+  { id: 'b', value: 2 },
+];
+
+return (
+  <div>
+    {array.map(item => <p key={item.id}>{item.value}</p>)}
+  </div>
+);

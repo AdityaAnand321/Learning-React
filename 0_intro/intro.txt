@@ -6,4 +6,23 @@ Node_modules: isme libraries ka code hota hai
 Public: output me jo dikhae deta hai: starting wala
 packga.json: configuration file
 src folder: imp folder      
-            
+-----------------------------------------------------------------------          
+
+
+When there’s no unique ID available and performance/bugs aren't critical.
+
+----------------------------------------------------------------
+
+ek bar code normal chalta hai.
+aur ek bar code jab strict mode me rhta hai to chalta hai .
+to total 2 bar chal jata hai code .
+
+example cosole 2 baar print hoga.
+ 
+function App() {
+  console.log("This is useEffect hook")
+  return (
+    <></>
+  )
+}
+export default App

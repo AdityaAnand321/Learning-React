@@ -1,0 +1,13 @@
+useEffect Hook: ye function ko call khud nhi kartey . ye situation ke hisab se chalta hai.
+
+syntax
+
+(i)useEffect(function, array);
+(ii) useEffect(function);
+(iii) useEffect(funtion,[]);  [] - ye empty array hai
+
+example:
+useEffect(()=>{console.log("heelo")});
+useEffect(()=>{console.log("heelo")},[]);
+useEffect(()=>{console.log("heelo")},[array]);
+

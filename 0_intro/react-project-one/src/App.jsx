@@ -30,12 +30,12 @@ import { Intro } from "./Intro"
 // }
 
 //4 printing array
-//  export default function App() {
-//   const array=[1,2,3,4,5];
-//   return (
-//       <div>
-//         { array.map(element=> <p>{element}</p> )}
-//       </div>
-//    )
-// }
+ export default function App() {
+  const array=[1,2,3,4,5];
+  return (
+      <div>
+        { array.map((element,i)=> <p key={i}>{element}</p> )}
+      </div>
+   )
+}
 
