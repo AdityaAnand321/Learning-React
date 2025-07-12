@@ -1,0 +1,27 @@
+used for dom manipulate
+ye object return karta hai
+
+
+1.value persist ny kar pati hai to useREf ka use karte hai.
+function App() {
+  const [count, setCount] = useState(0);
+  let val=1;
+
+  // function  handleIncrement(){
+  //   val=val+1;
+  //   console.log("Value of val: ",val);  //value bar bar 2 hi rahegi ye apni value update ny kar pa rha hai
+  //   setCount(count+1);
+  // }
+
+  isko overcome karne ke liye 
+  let val=useRef(0);
+
+  function(){
+    val.current=val.current+1;
+    console.log("value of val ",val.current);
+  }
+
+  2.useRef ke variable change karne pe renders ny hota hai 
+  jabki useState vale me hota hai
+
+  3.use Ref ko esly banaya gya tha taki dom me kisi elemnt ko directly access kar paye

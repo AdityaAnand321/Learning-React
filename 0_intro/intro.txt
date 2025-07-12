@@ -26,3 +26,6 @@ function App() {
   )
 }
 export default App
+
+------------------------------------------------
+re render sirf component hota hai uske bahar ki cheeze ny hoti hai
