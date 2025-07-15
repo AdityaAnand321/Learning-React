@@ -1,0 +1,8 @@
+routing: switching from one component to another component without reloading the page
+
+Anchor tag use ny karenge kyuki poora page refresh karwa dega
+
+usePara:
+useNavigation :one page to another without moving
+
+Nested Routing: me outlet use karte hai parent me

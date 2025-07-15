@@ -1,0 +1,31 @@
+helps to read and subscribe to context from our component
+Prop Driling: 
+Steps: 
+1.create
+2.provide
+3.consume
+
+
+const UserContext=createContext(); //create
+
+function App(){
+    const [user,setUser]=useState({Name: "Love"});
+    return (
+        <>
+        <UserContext.Provider value={user}>
+            <ChildA/>
+        </USerContex.Provider>
+    )
+}
+expoort {userContext}
+
+//Access child 3 me hoga
+
+import {userContext} from '../App'
+const childC(){
+    const user=useContext(UserContext);
+    return(
+        div
+        {user.name}
+    )
+}

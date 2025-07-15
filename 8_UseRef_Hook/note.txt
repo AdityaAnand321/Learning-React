@@ -25,3 +25,10 @@ function App() {
   jabki useState vale me hota hai
 
   3.use Ref ko esly banaya gya tha taki dom me kisi elemnt ko directly access kar paye
+  4.Onblur=isko use karte hai taki ham jo visit kiye hai uska tract rakh sake
+  5. {formik.touched.email && formik.errors.email ? (
+         <div>{formik.errors.email}</div>
+       ) : null}
+
+
+  

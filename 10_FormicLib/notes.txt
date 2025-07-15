@@ -1,0 +1,18 @@
+Formik: Formik is a small group of React components and hooks for building forms in React 
+
+1.
+UseFormik ka syntax 
+const formik = useFormik({
+  initialValues: {
+    field1: "",  // like email: ""
+    field2: ""
+  },
+  onSubmit: (values) => {
+    // when form is submitted
+  },
+  validate: (values) => {
+    // (optional) validation logic
+  }
+});
+
+------------------------------------------------------------------------
