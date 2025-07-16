@@ -1,0 +1,5 @@
+React Redux ek state management library hai jo React ke sath use hoti hai. Ye help karta hai application ke data ko centralized tareeke se manage karne me — especially jab aapke app me multiple components hote hain jo ek hi data ko access karna chahte hain.
+solve prop drilling problem by creating a centralized entity
+
+----------------
+
