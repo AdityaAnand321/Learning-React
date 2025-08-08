@@ -6,3 +6,49 @@ usePara:
 useNavigation :one page to another without moving
 
 Nested Routing: me outlet use karte hai parent me
+
+
+route: har page ka ek path hota hai use route bolte hai
+jaise home ka www.codehelp.in 
+
+create browser router use karte hai route ke liye
+
+
+1.Pahle import karna hai import {createBrowserROuter}
+const router= createBrowserRouter(
+    [{
+        path:'/'
+        element:<Home/> jo load karna hai us path pe
+    }]
+)
+
+
+RouterProvider ko bhi import karna padta hai createBrowserRouter kesath
+RouterProvider: ye use karke batate hai ki mai routing use kar rha hu kaun se pages me kya hoga
+<RouterProvider router=route>
+
+NavLink: ye agar use karte hai to class bhi add kar sakte hai
+is active class dal sakte hai 
+
+
+useParams: parameter ko manage karne ke liye
+            handle parameter agar agar koi parameter pass rhti hai usko handle karne ke liye
+
+path:"student/:id" yha id parameter 
+
+us id ko aise access karenge
+const{id}=useParams();
+
+UseNavigationHook:ek page se doosre pe without reload
+isko use karne ke liye pahle import {useNavigate}
+phir ek reference lenge 
+const navigate=useNavigate();
+navigate('/path')
+
+
+Nested Routing : 
+outlet use karte hai child me  agar nested routing use kar rhe hai to 
+
+aur phir isko children me defin karte hai uske paths 
+
+* se agar koi bhi doosri site galt hit hojati hai usko manage kar sakte hai
