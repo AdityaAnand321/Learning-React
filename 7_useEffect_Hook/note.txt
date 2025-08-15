@@ -17,7 +17,7 @@ UseEffect: is a ReactHook used to Handle sideEffects in functional components.
 
 // 1 .ye sirf first render pe chalega 
 useEffectc(()=>{
-    console.log("Counter Mounted");
+    console.log("Counter Mounted");k
 },[])
 
 

@@ -1,16 +1,14 @@
 import UserCard from "./components/UserCard";
-
+import Filter from './components/filter'
  
 function App() {
    
   return (
    
     
-       <div>
-      <UserCard />
-      <UserCard />
-      <UserCard />
-      </div>
+        
+      <Filter/>
+      
      
     
   )
